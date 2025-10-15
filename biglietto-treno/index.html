@@ -16,35 +16,68 @@
             crossorigin="anonymous" />
     </head>
 
-    <body>
+    <body class="bg-danger">
 
         <div class="container-fluid text-center">
             <h1>Calcola il prezzo del tuo biglietto</h1>
             <div>
                 <form action>
-                    <div class="row g-3">
-                        <div class="col-md-4">
-                            <label class="form-label" id="name" type="text" placeholder="Es. Mario Rossi">Nome e cognome</label>
-                            <input type="text" class="form-control" id="nameField">
-                        </div>
-                        <div class="col-md-4">
-                            <label class="form-label" id="km" type="number" placeholder="100">Km da percorrere</label>
-                            <input class="form-control" id="km_field" type="number">
-                        </div>
-                        <div class="col-md-4">
-                            <label class="form-label" id="age" type="number" placeholder="10">Inserire l'età</label>
-                            <input class="form-control" id="age_field" type="number">
+                    <div class="card m-4 bg-light ">
+                        <div class="row row-cols-3 d-flex justify-content-center">
+                            <div class="col">
+                                <label class="form-label" id="name" type="text"
+                                    placeholder="Es. Mario Rossi">Nome e
+                                    cognome</label>
+                                <input type="text" class="form-control"
+                                    id="name_field">
+                            </div>
+                            <div class="col">
+                                <label class="form-label" id="km" type="number"
+                                    placeholder="100">Km da percorrere</label>
+                                <input class="form-control" id="km_field"
+                                    type="number">
+                            </div>
+                            <div class="col">
+                                <label class="form-label" id="age" type="number"
+                                    placeholder="10">Inserire l'età</label>
+                                <input class="form-control" id="age_field"
+                                    type="number">
                             </input>
                         </div>
-                        <div class="mt-4">
-                            <button class="btn btn-outline-danger" type="submit" id="button_el">Genera il tuo biglietto
+                        <div class="col">
+                            <button class="btn btn-danger m-3" type="submit"
+                                id="button_el">Genera il tuo biglietto
                             </button>
                         </div>
-                        <p id="result"></p>
                     </div>
-                </form>
+                </div>
+            </form>
+        </div>
+
+        <h1 class="m-4">Biglietto passeggero</h1>
+
+        <div class="card d-flex">
+            <div class="row row-cols-4">
+                <div class="col">
+                    <h6>Nome passeggero</h6>
+                    <p id="stamp_name"></p>
+                </div>
+                <div class="col">
+                    <h6>Carrozza</h6>
+                    <p>5</p>
+                </div>
+                <div class="col">
+                    <h6>Codice CP</h6>
+                    <p>92911</p>
+                </div>
+                <div class="col">
+                    <h6>Prezzo</h6>
+                    <p id="result"></p>
+                </div>
+              </div>
             </div>
         </div>
+    </div>
 
         <!-- Bootstrap JavaScript Libraries -->
         <script

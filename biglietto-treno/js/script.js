@@ -42,6 +42,8 @@ const km_field = document.getElementById('km_field')
 const form_el = document.querySelector('form')
 const button_el = document.getElementById('button_el')
 const result_el = document.getElementById('result')
+const name_field = document.getElementById('name_field')
+const stamp_name = document.getElementById('stamp_name')
 
 console.log(age_field, km_field, form_el, button_el, result_el);
 
@@ -64,6 +66,8 @@ form_el.addEventListener('submit', (event) => {
     }
 
     result_el.textContent = `il prezzo del biglietto è ${ticket.toFixed(2)}`
+
+    stamp_name.textContent = name_field.value
 
 })
 
