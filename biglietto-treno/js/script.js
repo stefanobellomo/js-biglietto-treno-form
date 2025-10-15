@@ -40,7 +40,7 @@ let ticket = km_runs * price_for_km
 if (age_utent < 18) {
     ticket = ticket * discount_young
     console.log(ticket);
-} else if (age_utent >= 65) {
+} else if (age_utent > 65) {
     ticket = ticket * discount_senior
     console.log(ticket);
 } else {
