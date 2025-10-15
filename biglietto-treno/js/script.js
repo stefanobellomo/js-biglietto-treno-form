@@ -48,19 +48,16 @@ console.log(age_field, km_field, form_el, button_el, result_el);
 form_el.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const km_runs = Number(prompt ("inserisci km"))
-    const age_utent = Number(prompt ("inserisci l'età"))
-    const discount_young = 0.8;
-    const discount_senior = 0.6;
-    const price_for_km = 0.21;
+    const km_runs = km_field.value
+    const age_utent = age_field.value
 
-    let ticket = km_runs * price_for_km
+    let ticket = km_runs * 0.21
 
     if (age_utent < 18) {
-        ticket = ticket * discount_young
+        ticket = ticket * 0.8
         console.log(ticket);
     } else if (age_utent > 65) {
-        ticket = ticket * discount_senior
+        ticket = ticket * 0.6
         console.log(ticket);
     } else {
         console.log(ticket);
