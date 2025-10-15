@@ -37,10 +37,10 @@ Se non vi sentite particolarmente creativi, questa potrebbe essere un’implemen
 // const num = ticket.toFixed(2)
 // console.log(num);
 
-const age_field = document.querySelector('.age_field')
-const km_field = document.querySelector('.km_field')
+const age_field = document.getElementById('age_field')
+const km_field = document.getElementById('km_field')
 const form_el = document.querySelector('form')
-const button_el = document.querySelector('.button_el')
+const button_el = document.getElementById('button_el')
 const result_el = document.getElementById('result')
 
 console.log(age_field, km_field, form_el, button_el, result_el);
@@ -48,8 +48,8 @@ console.log(age_field, km_field, form_el, button_el, result_el);
 form_el.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const km_runs = km_field.value
-    const age_utent = age_field.value
+    const km_runs = parseFloat(km_field.value);
+    const age_utent = parseInt(age_field.value);
 
     let ticket = km_runs * 0.21
 
