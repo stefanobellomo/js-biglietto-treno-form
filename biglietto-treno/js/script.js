@@ -25,44 +25,52 @@ Se non vi sentite particolarmente creativi, questa potrebbe essere un’implemen
 
 // chiedere all'utente di inserire tramite prompt chilometri ed età
 
-const km_runs = Number(prompt ("inserisci km"))
-const age_utent = Number(prompt ("inserisci l'età"))
-
 
 // definire con variabili discount, prezzo biglietto e prezzo per chilometri
 
-const discount_young = 0.8;
-const discount_senior = 0.6;
-const price_for_km = 0.21;
-let ticket = km_runs * price_for_km
+
 
 // creare un if condition per determinare quanto costerà il biglietto all'utente in base ai dati inseriti e ai parametri da noi stabiliti
-if (age_utent < 18) {
-    ticket = ticket * discount_young
-    console.log(ticket);
-} else if (age_utent > 65) {
-    ticket = ticket * discount_senior
-    console.log(ticket);
-} else {
-    ticket = ticket
-    console.log(ticket);
-}
+
 
 // portiamo il prezzo del biglietto ad avere solo due valori decimali
-const num = ticket.toFixed(2)
-console.log(num);
-
+// const num = ticket.toFixed(2)
+// console.log(num);
 
 const age_field = document.querySelector('.age_field')
 const km_field = document.querySelector('.km_field')
-const form_el = document.querySelector('form_el')
+const form_el = document.querySelector('form')
 const button_el = document.querySelector('.button_el')
+const result_el = document.getElementById('result')
 
-console.log(age_field, km_field, form_el, button_el);
+console.log(age_field, km_field, form_el, button_el, result_el);
+
+form_el.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const km_runs = Number(prompt ("inserisci km"))
+    const age_utent = Number(prompt ("inserisci l'età"))
+    const discount_young = 0.8;
+    const discount_senior = 0.6;
+    const price_for_km = 0.21;
+
+    let ticket = km_runs * price_for_km
+
+    if (age_utent < 18) {
+        ticket = ticket * discount_young
+        console.log(ticket);
+    } else if (age_utent > 65) {
+        ticket = ticket * discount_senior
+        console.log(ticket);
+    } else {
+        console.log(ticket);
+    }
+
+    result_el.textContent = `il prezzo del biglietto è ${ticket.toFixed(2)}`
+
+})
 
 
-
-   
 
 
 
