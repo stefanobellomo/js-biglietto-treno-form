@@ -53,6 +53,14 @@ const num = ticket.toFixed(2)
 console.log(num);
 
 
+const age_field = document.querySelector('.age_field')
+const km_field = document.querySelector('.km_field')
+const form_el = document.querySelector('form_el')
+const button_el = document.querySelector('.button_el')
+
+console.log(age_field, km_field, form_el, button_el);
+
+
 
    
 
